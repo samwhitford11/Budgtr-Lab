@@ -1,13 +1,16 @@
 const { response } = require('express');
 const express = require('express');
 const app = express();
-const budget = require("./Models/budget")
+const Budget = require("./Models/budget")
 
 const PORT = 3019
 
 
 app.get("/", (req, res) => {
-    res.send("Hello Wolrd")
+    res.render('budget_index.ejs', 
+    {
+        Budget: Budget
+    })
 });
 
 

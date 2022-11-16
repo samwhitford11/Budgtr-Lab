@@ -1,4 +1,4 @@
-const budget = [
+const Budget = [
     {
       date: "April 1",
       name: "Income",
@@ -21,7 +21,7 @@ const budget = [
       tags: ["retirement", "investing in the future"]
     },
     {
-      date: "April 1",
+      date: "April 1", 
       name: "Savings",
       from: "Country Bank",
       amount: -100,
@@ -71,4 +71,4 @@ const budget = [
     },
   ];
 
-  module.exports = budget
+  module.exports = Budget

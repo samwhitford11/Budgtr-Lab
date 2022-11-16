@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/skeleton.css">
+    <title>Mother of All Budgets</title>
+</head>
+<body>
+   <h1> Mother of All Budgets</h1>
+    <div class="container">
+        <table> 
+            <% for(let i =0; i <Budget.length; i++) { %>
+            <tr><td><%= Budget[i].date%></td><td><%= Budget[i].name%></a></td><td><%= Budget[i].amount%></td></tr>  
+            <% } %>
+        </table>
+
+    </div>
+    
+</body>
+</html>
+
+
+
+
+
