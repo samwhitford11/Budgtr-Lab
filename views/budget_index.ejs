@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="/normalize.css">
-    <link rel="stylesheet" href="/skeleton.css">
+    
+    <link href="/normalize.css" rel="stylesheet" >
+    <link href="/skeleton.css" rel="stylesheet" >
     <title>Mother of All Budgets</title>
 </head>
 <body>
@@ -10,7 +11,9 @@
     <div class="container">
         <table> 
             <% for(let i =0; i <Budget.length; i++) { %>
-            <tr><td><%= Budget[i].date%></td><td><%= Budget[i].name%></a></td><td><%= Budget[i].amount%></td></tr>  
+            <tr><td><%= Budget[i].date%></td>
+                <td><a href="/budgets/<%=i%>"><%= Budget[i].name%></a></td>
+                <td><%= Budget[i].amount%></td></tr>  
             <% } %>
         </table>
 

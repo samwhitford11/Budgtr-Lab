@@ -1,2 +1,33 @@
-<link rel="stylesheet" href="/normalize.css">
-<link rel="stylesheet" href="/skeleton.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/skeleton.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1><%= Budget.name %></h1>
+        <a href="/budgets"><button>Back</button></a>
+        <h5>Date</h5>
+        <p><%= Budget.date %></p>
+        <h5>Name</h5>
+        <p><%= Budget.name %></p>
+        <h5>From</h5>
+        <p><%= Budget.from %></p>
+        <h5>Amount</h5>
+        <p><%= Budget.amount %></p>
+        <h5>Tags</h5>
+        <p><%= Budget.tags %></p>
+    </div>
+    
+</body>
+</html>
+
+
