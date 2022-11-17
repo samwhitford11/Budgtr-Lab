@@ -4,11 +4,43 @@
     
     <link href="/normalize.css" rel="stylesheet" >
     <link href="/skeleton.css" rel="stylesheet" >
-    <title>Mother of All Budgets</title>
+    <title>Budget Information</title>
 </head>
 <body>
    <h1> Mother of All Budgets</h1>
     <div class="container">
+        <a href="/budgets/new"><button>Add New Item</button></a>
+        
+        <div class="total">
+            <% var bankAccount = [] ;%>
+            <% for(let x = 0; x <Budget.length; x += 1) { %>
+              <% bankAccount.push(Budget[x].amount) %>
+            <% } %>
+
+            <% const total = bankAccount.reduce((accumulator, currentValue) => {
+                return accumulator+ currentValue; 
+            }, 0); %>
+            <h2>Total Amount: <%= total%></h2>
+
+            <% if (total < 0){ %>
+                <style>
+                    .total {
+                        background-color: red;
+                    } 
+                </style>
+                 <% } else if (total > 1){ %>
+                        <style>
+                            .total{
+                                background-color: green;
+                            }
+                        </style>
+            <% } %>   
+
+            
+        </div>
+        
+        
+        
         <table> 
             <% for(let i =0; i <Budget.length; i++) { %>
             <tr><td><%= Budget[i].date%></td>
@@ -16,6 +48,7 @@
                 <td><%= Budget[i].amount%></td></tr>  
             <% } %>
         </table>
+        
 
     </div>
     
